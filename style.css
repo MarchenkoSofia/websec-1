@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 25px;
+}
+.calculator {
+  background-color: #b9ffc1;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input,
+select,
+button,
+.results-box {
+  border: 1px dashed red;
+  border-radius: 8px;
+  background: transparent;
+  color: red;
+  font-size: 18px;
+  padding: 10px 15px;
+  outline: none;
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  padding-right: 33px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 30px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.results-box {
+  width: 100%;
+  min-height: 80px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  color: rgba(255, 0, 0, 0.4);
+}
+
+.current-item {
+  color: red;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  display: none;
+  max-width: 200px;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .inputs-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .input-group,
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 100px;
+  }
+}
